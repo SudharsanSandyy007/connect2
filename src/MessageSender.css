@@ -1,0 +1,47 @@
+.messagesender {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0px 10px 0px;
+}
+
+.messagesender__addPostContainer__top > form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messagesender__postImgUrl {
+  padding: 10px;
+  border: none;
+  background-color: rgb(214, 214, 214);
+  width: 61%;
+  border-radius: 50px;
+}
+
+.messagesender__postMsg {
+  padding: 10px;
+  border: none;
+  background-color: rgb(214, 214, 214);
+  width: 25%;
+  border-radius: 50px;
+}
+
+.messagesender__addPostContainer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.messagesenderAddPostContainerBottom__option {
+  display: flex;
+  align-items: center;
+}
+
+.messagesenderAddPostContainerBottom__option > .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+
+.messagesender__addPostContainer__bottom {
+  padding: 20px 0px 10px 0px;
+}

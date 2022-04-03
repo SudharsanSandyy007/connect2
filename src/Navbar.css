@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  color: white;
+  font-weight: 900;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.navbar__middle > a {
+  text-decoration: none;
+  color: white;
+}
+.navbarLeft__logo {
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.navbarLeft__logo > .MuiSvgIcon-root {
+  margin: 0px 10px;
+}
+
+.navbar__middle {
+  display: flex;
+  align-items: center;
+}
+
+.navbarMiddle__option {
+  padding: 10px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.navbarMiddle__option:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.navbarMiddle__option > .MuiSvgIcon-root {
+  font-size: 30px;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.navbarRight__option {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.navbarRight__option > .MuiAvatar-root {
+  margin: 0px 10px;
+  border: 2px solid black;
+}
+
+.navbarRight__option:hover {
+  transform: scale(1.01);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}

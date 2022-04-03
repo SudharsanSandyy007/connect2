@@ -1,0 +1,84 @@
+.walletTag {
+  background-color: white;
+  padding: 30px 30px 20px 30px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 70px;
+  transition: 0.3s;
+}
+.walletTag:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.walletOwnerInfo {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.walletOwnerInfo__email {
+  margin-left: 10px;
+}
+
+.walletBox__top {
+  display: flex;
+  align-items: center;
+}
+
+.walletBoxTop__left > .MuiSvgIcon-root {
+  font-size: 50px;
+  color: rgb(93, 0, 255);
+  margin-right: 10px;
+}
+
+.walletBoxTop__right {
+  font-size: large;
+}
+
+.walletBox__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.walletBox__bottom:hover {
+  background-color: rgb(121, 0, 219);
+
+  cursor: pointer;
+}
+
+.withdawalHistory {
+  background-color: white;
+  padding: 30px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-top: 20px;
+  min-height: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.withdawalHistory > h2 {
+  text-align: center;
+}
+.withdawalHistory::-webkit-scrollbar {
+  display: none;
+}
+
+.withdawalHistory::-webkit-scrollbar-track {
+  display: none;
+}
+
+.withdawalHistory::-webkit-scrollbar-thumb {
+  display: none;
+}

@@ -1,0 +1,29 @@
+.sidebar__chatBar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar__chatBar > .MuiSvgIcon-root {
+  font-size: xx-large;
+}
+
+.chatSideBar__startNewChat {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.sidebarChatBar__toemail {
+  font-size: large;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

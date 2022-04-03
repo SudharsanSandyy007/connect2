@@ -1,0 +1,101 @@
+.storeshowcase {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 20px;
+  max-width: 80vw;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.storeshowcaseTop__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.storeshowcaseTopInfo__storeTitle {
+  margin-left: 10px;
+}
+.storeshowcase__middle {
+  display: flex;
+
+  padding: 10px 0px;
+  max-height: 60vh;
+  overflow-x: scroll;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.storeshowcase__middle > img {
+  height: 200px;
+  margin: 10px;
+  border-radius: 2px;
+}
+.storeshowcase__middle .productCard > img {
+  height: 200px;
+  margin: 10px;
+  border-radius: 2px;
+}
+.storeshowcase__top {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.storeshowcase__middle::-webkit-scrollbar {
+  display: none;
+}
+
+.storeshowcase__middle::-webkit-scrollbar-track {
+  display: none;
+}
+
+.storeshowcase__middle::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.storeshowcase__bottom {
+  display: flex;
+  align-items: center;
+  place-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.visitStoreBtn {
+  background-color: rgb(255, 86, 114);
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.visitStoreBtn:hover {
+  transform: scale(1.05);
+  background-color: rgb(121, 0, 219);
+  cursor: pointer;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  margin: 10px;
+}
+
+.productCard > button {
+  margin: 10px;
+  padding: 5px;
+  width: 60%;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.productCard > button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

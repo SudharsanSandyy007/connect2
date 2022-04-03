@@ -1,0 +1,55 @@
+.connectpay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connectpay__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  margin: 50px;
+  min-height: 70vh;
+  min-width: 35vw;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.connectpay__container > h1 {
+  margin-top: 20px;
+}
+
+.connectPay__description {
+  margin-top: 35px;
+}
+
+.connect__pay__form__option > input {
+  padding: 10px;
+  width: 300px;
+  margin: 0px 0px 10px 0px;
+}
+
+.connectPayForm__payBtn {
+  padding: 10px;
+  width: 325px;
+  margin-top: 45px;
+  background-color: rgb(255, 86, 114);
+  color: white;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.connectPayForm__payBtn:hover {
+  transform: scale(1.01);
+  background-color: rgb(121, 0, 219);
+}
+
+.connectpay__container > form {
+  margin-top: 60px;
+}
