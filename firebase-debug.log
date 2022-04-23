@@ -1,0 +1,56 @@
+[debug] [2022-04-23T07:54:37.773Z] ----------------------------------------------------------------------
+[debug] [2022-04-23T07:54:37.775Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sudha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-04-23T07:54:37.776Z] CLI Version:   10.7.1
+[debug] [2022-04-23T07:54:37.776Z] Platform:      win32
+[debug] [2022-04-23T07:54:37.776Z] Node Version:  v16.13.2
+[debug] [2022-04-23T07:54:37.777Z] Time:          Sat Apr 23 2022 13:24:37 GMT+0530 (India Standard Time)
+[debug] [2022-04-23T07:54:37.777Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-23T07:54:37.859Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-23T07:54:37.860Z] > authorizing via signed-in user (msandhiya.2019@vitstudent.ac.in)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\connect2
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-23T07:55:31.272Z] Using project from CLI flag: connect2-c7d93
+[debug] [2022-04-23T07:55:31.275Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/connect2-c7d93 [none]
+[debug] [2022-04-23T07:55:32.215Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/connect2-c7d93 200
+[debug] [2022-04-23T07:55:32.216Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/connect2-c7d93 {"projectId":"connect2-c7d93","projectNumber":"337587282929","displayName":"connect2","name":"projects/connect2-c7d93","resources":{"hostingSite":"connect2-c7d93","storageBucket":"connect2-c7d93.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE"}
+[info] i  Using project connect2-c7d93 (connect2) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-23T07:55:49.039Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-04-23T07:55:49.483Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-04-23T07:55:49.484Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.11","browserURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.11/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.11/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.memory.js"}}
+[info] +  Wrote build/index.html 
+[info] 
+[info] i  Detected a .git folder at D:\connect2 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=74556984&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...

@@ -26,6 +26,7 @@
   height: 400px;
   border-radius: 3px;
   margin: 10px 0px;
+  max-width: 100%;
 }
 
 .post__bottom {

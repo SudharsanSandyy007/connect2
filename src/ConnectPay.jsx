@@ -40,8 +40,8 @@ function ConnectPay() {
     //RAZORPAY---------
 
     var options = {
-      key: "rzp_test_KJIRu7kUHgB9iH",
-      key_secret: "nmTV9B8YUvRzjWkhj73xpeWs",
+      key: "rzp_live_LfeNAcLrs4ckTi",
+      key_secret: "ZSROC5s5brlAae1amnbnG4Ol",
       amount: amount * 100,
       currency: "INR",
       name: "CONNECT TECHNOLOGIEZ",

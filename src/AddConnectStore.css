@@ -1,0 +1,37 @@
+.addconnectstore__ipbox {
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 3px;
+  width: 300px;
+  background-color: rgb(226, 226, 226);
+}
+
+.addconnectstore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  margin-top: 100px;
+}
+.addconnectstore__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 50px;
+  align-items: center;
+}
+.addconnectstore__btn {
+  padding: 10px;
+  background-color: rgb(121, 0, 219);
+  border: none;
+  color: white;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  border-radius: 3px;
+  width: 80%;
+}
+
+.addconnectstore__title {
+  margin-bottom: 30px;
+}
