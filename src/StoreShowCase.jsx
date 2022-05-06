@@ -8,15 +8,12 @@ import {
   getDocs,
   setDoc,
   doc,
+  updateDoc,
 } from "firebase/firestore";
 import { db } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import emailjs from "emailjs-com";
 
-/*
-HOTSPOT | MENS WEAR
-We provide top quality styles at affordable prices...! Our collections are very selective and comfortable to wear. All age and size categories are available! Happy Shopping :) 
-*/
 function StoreShowCase({
   shopid,
   shopname,
@@ -30,8 +27,8 @@ function StoreShowCase({
   const makepayment = (pprice, pname, pid) => {
     //RAZORPAY---------
     var options = {
-      key: "rzp_live_LfeNAcLrs4ckTi",
-      key_secret: "ZSROC5s5brlAae1amnbnG4Ol",
+      key: "rzp_test_RjCr3K2nZDtpjM",
+      key_secret: "WDPHdHnASUr2lRZ4QnEkF46W",
       amount: pprice * 100,
       currency: "INR",
       name: "CONNECT TECHNOLOGIEZ",
@@ -45,6 +42,20 @@ function StoreShowCase({
         " | CONNECT PAY",
       handler: function (response) {
         alert(response.razorpay_payment_id);
+        console.log("ShopOwner>>>", shopowner);
+        const wallets = query(
+          collection(db, "wallet"),
+          where("owner", "==", shopowner)
+        );
+        getDocs(wallets).then((snapshot) => {
+          snapshot.forEach((documnt) => {
+            let amt = documnt.data().amount;
+            const docRef = doc(db, "wallet", documnt.id);
+            updateDoc(docRef, {
+              amount: parseInt(amt) + parseInt(pprice),
+            });
+          });
+        });
 
         var templateParams = {
           shop_owner: shopowner,
@@ -89,27 +100,6 @@ function StoreShowCase({
     //----------
   };
 
-  useEffect(() => {
-    const collref = collection(db, "arraytest");
-    setDoc(doc(collref, "SF"), {
-      name: "San Francisco",
-      state: "CA",
-      country: "USA",
-      capital: false,
-      population: 860000,
-      regions: ["west_coast", "norcal"],
-    });
-    getDocs(collref)
-      .then((snapshot) => {
-        snapshot.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
-        });
-      })
-      .catch((e) => {
-        alert(e.message);
-      });
-  }, []);
-
   return (
     <div className="storeshowcase">
       <div className="storeshowcase__top">
@@ -136,9 +126,9 @@ function StoreShowCase({
           </div>
         ))}
       </div>
-      <div className="storeshowcase__bottom">
+      {/* <div className="storeshowcase__bottom">
         <div className="visitStoreBtn">VISIT STORE</div>
-      </div>
+      </div> */}
     </div>
   );
 }

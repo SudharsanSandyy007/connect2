@@ -30,6 +30,7 @@ function MessageSender() {
       postImgUrl: postImgUrl,
       postMsg: postMsg,
       timestamp: serverTimestamp(),
+      likes: [],
     })
       .then((result) => {
         console.log(result);
@@ -69,7 +70,7 @@ function MessageSender() {
           <input type="submit" style={{ display: "none" }} />
         </form>
       </div>
-      <div className="messagesender__addPostContainer__bottom">
+      {/* <div className="messagesender__addPostContainer__bottom">
         <div className="messagesenderAddPostContainerBottom__option">
           <CameraAltRounded style={{ color: "green" }} /> <p>Add Photos</p>
         </div>
@@ -80,7 +81,7 @@ function MessageSender() {
           <SentimentSatisfied style={{ color: "yellow" }} />{" "}
           <p>Feeling/Activity</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

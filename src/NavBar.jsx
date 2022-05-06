@@ -63,9 +63,6 @@ function NavBar() {
             <Chat />
           </div>
         </Link>
-        <div className="navbarMiddle__option">
-          <CoronavirusRounded />
-        </div>
       </div>
 
       <div className="navbar__right">

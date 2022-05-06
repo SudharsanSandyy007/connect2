@@ -97,12 +97,12 @@ function SideBar() {
           <Storefront style={{ color: "#0044ff" }} /> <b>Connect Shops</b>
         </div>
       </Link>
-      <div className="sidebar__option">
+      {/* <div className="sidebar__option">
         <Coronavirus style={{ color: "#00ff99" }} /> <b>Covid Tracker</b>
       </div>
       <div className="sidebar__option">
         <Settings style={{ color: "#737373" }} /> <b>Settings</b>
-      </div>
+      </div> */}
     </div>
   );
 }

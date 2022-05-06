@@ -1,9 +1,17 @@
 import { Bookmark, Comment, Send, Share, ThumbUp } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
-import { addDoc, collection } from "firebase/firestore";
-import React from "react";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  updateDoc,
+} from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { db } from "./firebase";
 import "./Post.css";
+import { useStateValue } from "./StateProvider";
 function Post({
   profilePic,
   displayName,
@@ -11,7 +19,11 @@ function Post({
   postImgUrl,
   postMsg,
   timestamp,
+  likes,
 }) {
+  const [{ user }, dispatch] = useStateValue();
+  const [likeCount, setlikeCount] = useState(0);
+
   const addtobookmarks = (e) => {
     const collref = collection(db, "bookmarks");
     addDoc(collref, {
@@ -23,6 +35,24 @@ function Post({
       .catch((err) => {
         alert(err.message);
       });
+  };
+
+  const addOrRemoveLikes = (e) => {
+    let tempArr = [];
+    e.target.style.color = "blue";
+    const docRef = doc(db, "posts", postid);
+    getDoc(docRef).then((snapshot) => {
+      tempArr = snapshot.data().likes;
+
+      if (tempArr.indexOf(user.email) !== -1) {
+      } else {
+        tempArr.push(user.email);
+      }
+
+      updateDoc(docRef, {
+        likes: tempArr,
+      });
+    });
   };
   return (
     <div className="post">
@@ -41,14 +71,14 @@ function Post({
       </div>
       <div className="post__bottom">
         <div className="post__bottom__option">
-          <ThumbUp /> <p>Like</p>
+          <ThumbUp onClick={addOrRemoveLikes} /> <p>Like</p>
         </div>
-        <div className="post__bottom__option">
+        {/* <div className="post__bottom__option">
           <Comment /> <p>Comment</p>
         </div>
         <div className="post__bottom__option">
           <Share /> <p>Share</p>
-        </div>
+        </div> */}
         <div className="post__bottom__option" onClick={addtobookmarks}>
           <Bookmark /> <p>Save</p>
         </div>

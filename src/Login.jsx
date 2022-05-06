@@ -65,7 +65,7 @@ function Login() {
           }
         });
 
-        //for adding user id to db if the user is logging in for the first time.
+        //for adding wallet to db if the user is logging in for the first time.
         const walletref = collection(db, "wallet");
         let walletList = [];
         getDocs(walletref).then((snapchat) => {
@@ -73,9 +73,11 @@ function Login() {
             walletList.push({ ...doc.data(), walletid: doc.id });
           });
 
+          console.log("Walletlist>>>", walletList);
+
           let isWalletPresent = false;
           walletList.forEach((u) => {
-            if (u.email == response.user.email) {
+            if (u.owner == response.user.email) {
               isWalletPresent = "true";
             }
           });

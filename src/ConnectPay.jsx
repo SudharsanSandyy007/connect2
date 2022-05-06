@@ -2,6 +2,7 @@ import {
   addDoc,
   collection,
   doc,
+  getDocs,
   onSnapshot,
   query,
   updateDoc,
@@ -21,27 +22,14 @@ function ConnectPay() {
 
   const makepayment = (e) => {
     e.preventDefault();
-
-    const colref = collection(db, "wallet");
-    const q = query(colref, where("owner", "==", user.email));
-
-    onSnapshot(q, (snapshot) => {
-      let temp;
-      snapshot.docs.forEach((doc) => {
-        temp = doc.data().amount;
-        setwalletId(doc.id);
-      });
-      setprevWalletAmt(temp);
-    });
-
-    alert(walletId);
-    const amt = Number(amount) + Number(prevWalletAmt);
+    let amt1;
+    let tempdocid;
 
     //RAZORPAY---------
 
     var options = {
-      key: "rzp_live_LfeNAcLrs4ckTi",
-      key_secret: "ZSROC5s5brlAae1amnbnG4Ol",
+      key: "rzp_test_RjCr3K2nZDtpjM",
+      key_secret: "WDPHdHnASUr2lRZ4QnEkF46W",
       amount: amount * 100,
       currency: "INR",
       name: "CONNECT TECHNOLOGIEZ",
@@ -49,17 +37,22 @@ function ConnectPay() {
       handler: function (response) {
         alert(response.razorpay_payment_id);
 
-        if (amt < 0) {
+        if (amt1 < 0) {
           alert("Amount should be greater than 0.");
         } else {
-          const docref = doc(db, "wallet", walletId);
-          updateDoc(docref, {
-            amount: amt,
-          })
-            .then(alert("WALLET UPDATED"))
-            .catch((e) => {
-              console.log(e.message);
+          const wallets = query(
+            collection(db, "wallet"),
+            where("owner", "==", email)
+          );
+          getDocs(wallets).then((snapshot) => {
+            snapshot.forEach((documnt) => {
+              amt1 = Number(documnt.data().amount) + Number(amount);
+              const docRef = doc(db, "wallet", documnt.id);
+              updateDoc(docRef, {
+                amount: amt1,
+              });
             });
+          });
         }
       },
       prefill: {

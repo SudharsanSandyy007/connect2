@@ -72,6 +72,7 @@ function FeedBox() {
             postImgUrl={post.postImgUrl}
             postMsg={post.postMsg}
             timestamp={post.timestamp}
+            likes={post.likes}
           />
         ))}
       </div>
